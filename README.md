@@ -31,7 +31,7 @@ sentences = ["Ibukota Perancis adalah Paris",
             "Pizza adalah makanan khas Italia", 
             "Saya kuliah di Carneige Melon University"]
 
-model = SentenceTransformer('firqaaa/indo-sbert-finetuned-snli-mnli-id')
+model = SentenceTransformer('firqaaa/indo-sbert-finetuned-anli-id')
 embeddings = model.encode(sentences)
 print(embeddings)
 ```
@@ -61,8 +61,8 @@ sentences = ["Ibukota Perancis adalah Paris",
 
 
 # Load model from HuggingFace Hub
-tokenizer = AutoTokenizer.from_pretrained('firqaaa/indo-sbert-finetuned-snli-mnli-id')
-model = AutoModel.from_pretrained('firqaaa/indo-sbert-finetuned-snli-mnli-id')
+tokenizer = AutoTokenizer.from_pretrained('firqaaa/indo-sbert-finetuned-anli-id')
+model = AutoModel.from_pretrained('firqaaa/indo-sbert-finetuned-anli-id')
 
 # Tokenize sentences
 encoded_input = tokenizer(sentences, padding=True, truncation=True, return_tensors='pt')
