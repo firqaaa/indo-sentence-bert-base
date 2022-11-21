@@ -31,7 +31,7 @@ sentences = ["Ibukota Perancis adalah Paris",
             "Pizza adalah makanan khas Italia", 
             "Saya kuliah di Carneige Melon University"]
 
-model = SentenceTransformer('firqaaa/indo-sbert-finetuned-anli-id')
+model = SentenceTransformer('firqaaa/indo-sentence-bert-base')
 embeddings = model.encode(sentences)
 print(embeddings)
 ```
@@ -61,8 +61,8 @@ sentences = ["Ibukota Perancis adalah Paris",
 
 
 # Load model from HuggingFace Hub
-tokenizer = AutoTokenizer.from_pretrained('firqaaa/indo-sbert-finetuned-anli-id')
-model = AutoModel.from_pretrained('firqaaa/indo-sbert-finetuned-anli-id')
+tokenizer = AutoTokenizer.from_pretrained('firqaaa/indo-sentence-bert-base')
+model = AutoModel.from_pretrained('firqaaa/indo-sentence-bert-base')
 
 # Tokenize sentences
 encoded_input = tokenizer(sentences, padding=True, truncation=True, return_tensors='pt')
@@ -130,7 +130,3 @@ SentenceTransformer(
   (1): Pooling({'word_embedding_dimension': 768, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False})
 )
 ```
-
-## Citing & Authors
-
-<!--- Describe where people can find more information --> 
