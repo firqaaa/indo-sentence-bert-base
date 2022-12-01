@@ -29,7 +29,7 @@ from sentence_transformers import SentenceTransformer
 sentences = ["Ibukota Perancis adalah Paris", 
             "Menara Eifel terletak di Paris, Perancis", 
             "Pizza adalah makanan khas Italia", 
-            "Saya kuliah di Carneige Melon University"]
+            "Saya kuliah di Carneige Mellon University"]
 
 model = SentenceTransformer('firqaaa/indo-sentence-bert-base')
 embeddings = model.encode(sentences)
@@ -57,7 +57,7 @@ def mean_pooling(model_output, attention_mask):
 sentences = ["Ibukota Perancis adalah Paris", 
              "Menara Eifel terletak di Paris, Perancis", 
              "Pizza adalah makanan khas Italia", 
-             "Saya kuliah di Carneige Melon University"]
+             "Saya kuliah di Carneige Mellon University"]
 
 
 # Load model from HuggingFace Hub
@@ -107,7 +107,7 @@ The model was trained with the parameters:
 Parameters of the fit()-Method:
 ```
 {
-    "epochs": 3,
+    "epochs": 5,
     "evaluation_steps": 0,
     "evaluator": "NoneType",
     "max_grad_norm": 1,
@@ -117,7 +117,7 @@ Parameters of the fit()-Method:
     },
     "scheduler": "WarmupLinear",
     "steps_per_epoch": null,
-    "warmup_steps": 5893,
+    "warmup_steps": 9930,
     "weight_decay": 0.01
 }
 ```
@@ -130,3 +130,7 @@ SentenceTransformer(
   (1): Pooling({'word_embedding_dimension': 768, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False})
 )
 ```
+
+## Citing & Authors
+
+<!--- Describe where people can find more information --> 
